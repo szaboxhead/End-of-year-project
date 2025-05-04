@@ -22,11 +22,11 @@
 >##### ART:
 >- External artist [@marceles](https://marceles.carrd.co)
 
-### Website:
-- Started development : 
-- Ended development : 
-#### Software Used:
-- 
--
--
-#### Outside sources:
+>### Website:
+>- Started development : 
+>- Ended development : 
+>#### Software Used:
+>- 
+>-
+>-
+>#### Outside sources:

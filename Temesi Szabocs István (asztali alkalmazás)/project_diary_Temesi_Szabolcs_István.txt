@@ -1,0 +1,226 @@
+Commit History Summary by Day  
+
+2025-05-04:  
+- Removed everything that couldn't be implemented  
+
+2025-05-02:  
+- Implemented save override functionality  
+- Added cloud save limit  
+- Completed save/load menu with background and scrollable local saves  
+
+2025-05-01:  
+- Implemented API and database connection (done individually due to team issues)  
+
+2025-04-29:  
+- Worked on file upload functionality  
+- Implemented login system and save downloading  
+
+2025-04-28:  
+- Started cloud saving and app login functionality (non-functional without backend API)  
+- Updated changelog  
+
+2025-04-23:  
+- Added void crystal game end  
+- Adjusted music and UI  
+
+2025-04-22:  
+- Made style adjustments  
+- Modified styles and added sprites  
+
+2025-04-13:  
+- Added drawings (art by marcelamarceles)  
+- Updated room base image  
+
+2025-04-03:  
+- Fixed enemy movement (again)  
+- Implemented witch character  
+- Fixed crash when moving friendly units in combat  
+
+2025-04-01:  
+- Started on achievements  
+- Organized remaining tasks  
+
+2025-03-28:  
+- Fixed UI issues  
+- Completed empty room functionality  
+
+2025-03-24:  
+- Added end game screen  
+- Started empty room implementation  
+
+2025-03-18:  
+- Added room and unit examination functionality  
+
+2025-03-16:  
+- UI improvements  
+
+2025-03-11:  
+- Updated new game scene  
+
+2025-03-04:  
+- Fixed underground forest deletion  
+- Started custom buttons and added decorative elements  
+
+2025-02-28:  
+- Fixed combat and unit purchase  
+- Implemented ranged combat support  
+- Added named saves and restructured project  
+
+2025-02-21:  
+- Fixed enemy movement  
+- Worked on loading and export templates  
+
+2025-02-20:  
+- Worked on menus  
+- Completed movement and saving systems  
+- Started main menu implementation  
+
+2025-02-18:  
+- Fixed unit display  
+- Rewrote unit display system  
+
+2025-02-13:  
+- Got enemy movement and combat working  
+
+2025-02-11:  
+- Fixed some issues (broke others)  
+- Implemented enemy unit pathfinding  
+
+2025-02-04:  
+- Began turn-based combat implementation  
+
+2025-02-03:  
+- Fixed room effect choices  
+- Added event viewer  
+
+2025-01-31:  
+- Completed recruiting functionality  
+
+2025-01-30:  
+- Fixed screen offset  
+- Implemented buildable room effects  
+
+2025-01-27:  
+- Started filter buttons for building menu  
+
+2025-01-23:  
+- Improved build menu appearance (non-functional)  
+- Fixed warnings  
+
+2025-01-21:  
+- Completed roundstart choices  
+
+2025-01-17:  
+- Worked on roundstart effects  
+
+2025-01-16:  
+- Implemented UI for turn start effects  
+
+2025-01-10:  
+- Added debug features  
+- Worked on round start effects  
+
+2025-01-09:  
+- Added list of all units  
+
+2025-01-03:  
+- Generated room effects  
+- Improved unit and condition display  
+
+2025-01-02:  
+- Worked on generated rooms  
+- Added to room effects  
+
+2024-12-28:  
+- Worked on building menu  
+
+2024-12-02:  
+- Worked on game phases  
+
+2024-11-22:  
+- Implemented room opening constraints  
+
+2024-11-20:  
+- Started explore stage  
+
+2024-11-19:  
+- Implemented signals  
+
+2024-11-18:  
+- Started room selection  
+
+2024-11-15:  
+- Added dev UI with regenerate button  
+- Completed room generation (missing 2 WYRD rooms)  
+
+2024-11-10:  
+- Completed generation basics  
+- Implemented connections  
+
+2024-11-06:  
+- Tweaked generation  
+
+2024-11-04:  
+- Fixed directional checking for room generation  
+
+2024-10-18:  
+- Completed blocker and size 6 room generation  
+
+2024-10-17:  
+- Worked on coordinate generation  
+
+2024-10-02:  
+- Updated main game script  
+
+2024-09-30:  
+- Fixed connections  
+- Limited volcanic shaft generation  
+
+2024-09-27:  
+- Worked on connections and volcanic shaft generation  
+
+2024-09-26:  
+- Implemented volcanic shaft (single instance working)  
+
+2024-09-25:  
+- Completed start, resource, and natural generation rooms  
+
+2024-09-24:  
+- Started natural formations  
+- Reduced redundancy  
+
+2024-09-23:  
+- Completed all rooms  
+- Implemented buildable rooms with correct connection colors  
+
+2024-09-20:  
+- Added buildable rooms with images  
+
+2024-09-19:  
+- Added room images  
+
+2024-09-18:  
+- Added reveal all rooms functionality  
+- Implemented room selection reveal  
+
+2024-09-17:  
+- Added hidden tiles  
+- Completed connectivity detection and placement  
+
+2024-09-16:  
+- First rewrite attempt  
+
+2024-09-13:  
+- Fixed connections (for equal height/width)  
+- Started connections implementation  
+
+2024-09-12:  
+- Added cursor detection on rooms  
+- Implemented keyboard camera movement  
+
+2024-09-09:  
+- Added edge-touch camera movement  
+- Implemented basic room generation  
+
+2024-09-07:  
+- Initial project setup  

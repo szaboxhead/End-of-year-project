@@ -4,7 +4,7 @@
 
 ## This project was made by:
 - Temesi Szabolcs István : Project Lead, Desktop Application Developer
-- Szabó Levente : Web Developer, Backend Developer
+- Szabó Levente : Front- and Backend Developer
 
 >### Desktop application:
 >- Started development : 2024-09-07

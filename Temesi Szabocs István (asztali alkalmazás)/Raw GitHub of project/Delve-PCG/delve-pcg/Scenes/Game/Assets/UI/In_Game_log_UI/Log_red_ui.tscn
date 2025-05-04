@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://qu2j1v082m0l"]
+
+[ext_resource type="Theme" uid="uid://dfeo3ebchf3ul" path="res://Resources/Themes/Default_Theme.tres" id="1_l4ywg"]
+
+[node name="LogBluUi" type="Label"]
+theme = ExtResource("1_l4ywg")
+theme_override_colors/font_color = Color(0.878431, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 0.231373, 1)
+theme_override_constants/outline_size = 6
+text = "This is a Red log"
+autowrap_mode = 3

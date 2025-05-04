@@ -1,0 +1,310 @@
+[
+	{
+		"Unit": "Soldier",
+		"STR": "5",
+		"Cost": "5",
+		"Power": ["",""],
+		"Origin":["BARRACKS"]
+	},
+	{
+		"Unit": "Gunner",
+		"STR": "3",
+		"Cost": "5",
+		"Power": ["Ranged",""],
+		"Origin":["BARRACKS"]
+	},
+	{
+		"Unit": "Hound",
+		"STR": "3",
+		"Cost": "5",
+		"Power": ["","Moves 2 spaces per round"],
+		"Origin":["KENNEL"]
+	},
+	{
+		"Unit": "Cleric",
+		"STR": "1",
+		"Cost": "8",
+		"Power": ["","Shields adjacent units (5 STR per Cleric)"],
+		"Origin":["TEMPLE"]
+	},
+	{
+		"Unit": "Mage",
+		"STR": "4",
+		"Cost": "7",
+		"Power": ["Ranged",""],
+		"Origin":["LIBRARY"]
+	},
+	{
+		"Unit": "Prisoner",
+		"STR": "1",
+		"Cost": "0",
+		"Power": ["","Hostile to both sides. See Prison (page 13)"],
+		"Origin":["PRISON"]
+	},
+	{
+		"Unit": "Alchemist",
+		"STR": "2",
+		"Cost": "8",
+		"Power": ["",""],
+		"Origin":["LABORATORY"]
+	},
+	{
+		"Unit": "Golem",
+		"STR": "7",
+		"Cost": "15",
+		"Power": ["","Immune to liquid and gas"],
+		"Origin":["GOLEM_FORGE"]
+	},
+	{
+		"Unit": "Cannon",
+		"STR": "30",
+		"Cost": "30",
+		"Power": ["Ranged","Can fire once per combat"],
+		"Origin":["FORGE"]
+	},
+	{
+		"Unit": "Skull Dwarf",
+		"STR": "1",
+		"Cost": "5",
+		"Power": ["","On defeat, roll 1D4: 3+ revive after combat"],
+		"Origin":["FORGOTTEN_CRYPTS"]
+	},
+	{
+		"Unit": "Drunkard",
+		"STR": "5",
+		"Cost": "0",
+		"Power": ["","A cowardly drunk, this adventurer won’t fight and won’t leave the inn during combat."],
+		"Origin":["INN"]
+	},
+	{
+		"Unit": "Witch Hunter",
+		"STR": "15",
+		"Cost": "0",
+		"Power": ["Ranged"," Their first attack during each combat stops an enemy from moving / attacking for two rounds."],
+		"Origin":["INN"]
+	},
+	{
+		"Unit": "Saboteur",
+		"STR": "5",
+		"Cost": "0",
+		"Power": ["","Automatically places a temporary level 2 Damage Trap in its grid space at the start of combat. This trap is removed at the end of combat."],
+		"Origin":["INN"]
+	},
+	{
+		"Unit": "Pathfinder",
+		"STR": "5",
+		"Cost": "0",
+		"Power": ["","Choose any grid space. The Pathfinder, and any one unit or Troop of your choice may start combat in that space."],
+		"Origin":["INN"]
+	},
+	{
+		"Unit": "Druid",
+		"STR": "5",
+		"Cost": "0",
+		"Power": ["","Can tame a Large Creature without fighting it. Once tamed, your dwarves may pass through its lair but you no longer control the Druid. Inn is empty."],
+		"Origin":["INN"]
+	},
+	{
+		"Unit": "Barbarian",
+		"STR": "20",
+		"Cost": "0",
+		"Power": ["","Once per combat, in a fit of rage, the barbarian can rush forward 4 grid spaces, dealing their STR damage to every enemy and friend they pass."],
+		"Origin":["INN"]
+	},
+	{
+		"Unit": "Field Surgeon",
+		"STR": "10",
+		"Cost": "0",
+		"Power": "Any Units / Troops defeated in the same grid space as the Field Surgeon are returned to full STR after combat.",
+		"Origin":["INN"]
+	},
+	{
+		"Unit": "Bard",
+		"STR": "5",
+		"Cost": "0",
+		"Power": ["","After entering combat with an enemy, roll 1D4. On a 4, the enemy is charmed: they are under your control unless taken over by another source. On 1 - 3, the bard is defeated."],
+		"Origin":["INN"]
+	},
+	{
+		"Unit": "Witch",
+		"STR": "5",
+		"Cost": "0",
+		"Power": ["","Choose a Unit/Troop, it has a 50% chanc of either being paralised or duble the STR of the chosen unit / Troop."],
+		"Origin":["INN"]
+	},
+	{
+		"Unit": "Jester",
+		"STR": "1",
+		"Cost": "0",
+		"Power": ["","Enemies will chase the nearest Jester instead of targeting the Entrance."],
+		"Origin":["INN"]
+	},
+	{
+		"Unit": "Greedy Hero",
+		"STR": "60",
+		"Cost": "0",
+		"Power": ["Ranged","If you do not pay them 5TG per turn, they turn hostile."],
+		"Origin":["INN"]
+	},
+	{
+		"Unit": "Monster Slayer",
+		"STR": "25",
+		"Cost": "0",
+		"Power": ["","Draw one less card for the Ancient Monstrosity to a minimum of 1 card."],
+		"Origin":["INN"]
+	},
+	{
+		"Unit": "Goblin",
+		"STR": "10",
+		"Cost": "-1",
+		"Power": ["",""],
+		"Origin":[]
+	},
+	{
+		"Unit": "Kobold",
+		"STR": "10",
+		"Cost": "-1",
+		"Power": ["",""],
+		"Origin":[]
+	},
+	{
+		"Unit": "Frog People",
+		"STR": "10",
+		"Cost": "-1",
+		"Power": ["",""],
+		"Origin":[]
+	},
+	{
+		"Unit": "Pixie",
+		"STR": "10",
+		"Cost": "-1",
+		"Power": ["",""],
+		"Origin":[]
+	},
+	{
+		"Unit": "Feral Dwarf",
+		"STR": "10",
+		"Cost": "-2",
+		"Power": ["",""],
+		"Origin":[]
+	},
+	{
+		"Unit": "Troll",
+		"STR": "10",
+		"Cost": "-2",
+		"Power": ["",""],
+		"Origin":[]
+	},
+	{
+		"Unit": "Huge Bat",
+		"STR": "10",
+		"Cost": "-2",
+		"Power": ["",""],
+		"Origin":[]
+	},
+	{
+		"Unit": "Angy Cave Goat",
+		"STR": "10",
+		"Cost": "-2",
+		"Power": ["",""],
+		"Origin":[]
+	},
+	{
+		"Unit": "Cave Kraken",
+		"STR": "20",
+		"Cost": "-2",
+		"Power": ["",""],
+		"Origin":[]
+	},
+	{
+		"Unit": "Basilisk",
+		"STR": "20",
+		"Cost": "-2",
+		"Power": ["",""],
+		"Origin":[]
+	},
+	{
+		"Unit": "Living Shadow",
+		"STR": "20",
+		"Cost": "-2",
+		"Power": ["",""],
+		"Origin":[]
+	},
+	{
+		"Unit": "Elemental",
+		"STR": "20",
+		"Cost": "-2",
+		"Power": ["",""],
+		"Origin":[]
+	},
+	{
+		"Unit": "Sabre-tooth Mole",
+		"STR": "40",
+		"Cost": "-1",
+		"Power": ["",""],
+		"Origin":[]
+	},
+	{
+		"Unit": "Stone Worm",
+		"STR": "40",
+		"Cost": "-1",
+		"Power": ["",""],
+		"Origin":[]
+	},
+	{
+		"Unit": "Undead Owl",
+		"STR": "40",
+		"Cost": "-1",
+		"Power": ["",""],
+		"Origin":[]
+	},
+	{
+		"Unit": "Nesting Lizard",
+		"STR": "40",
+		"Cost": "-1",
+		"Power": ["",""],
+		"Origin":[]
+	},
+	{
+		"Unit": "Undead",
+		"STR": "20",
+		"Cost": "-1",
+		"Power": ["",""],
+		"Origin":[]
+	},
+	{
+		"Unit": "Demon",
+		"STR": "20",
+		"Cost": "-1",
+		"Power": ["",""],
+		"Origin":[]
+	},
+	{
+		"Unit": "Defective Golem",
+		"STR": "40",
+		"Cost": "-2",
+		"Power": ["",""],
+		"Origin":[]
+	},
+	{
+		"Unit": "Artefact",
+		"STR": "0",
+		"Cost": "-3",
+		"Power": ["",""],
+		"Origin":[]
+	},
+	{
+		"Unit": "Slumbering Wyrm",
+		"STR": "?",
+		"Cost": "-2",
+		"Power": ["",""],
+		"Origin":[]
+	},
+	{
+		"Unit": "Wyrm",
+		"STR": "100",
+		"Cost": "-1",
+		"Power": ["",""],
+		"Origin":[]
+	}
+]

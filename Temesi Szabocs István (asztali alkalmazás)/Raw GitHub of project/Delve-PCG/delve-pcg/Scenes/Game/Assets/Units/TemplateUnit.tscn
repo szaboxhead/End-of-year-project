@@ -1,0 +1,85 @@
+[gd_scene load_steps=2 format=3 uid="uid://difs67t4dq775"]
+
+[ext_resource type="Script" path="res://Scripts/unit_script.gd" id="1_51jbo"]
+
+[node name="TemplateUnit" type="Node2D"]
+script = ExtResource("1_51jbo")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = 1
+offset_left = 5.0
+offset_right = 125.0
+offset_bottom = 20.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+color = Color(1, 1, 0, 1)
+
+[node name="Solo" type="Label" parent="ColorRect"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
+text = "temp"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Multi" type="OptionButton" parent="ColorRect"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_right = 87.0
+offset_bottom = 20.0
+theme_override_font_sizes/font_size = 8
+toggle_mode = false
+
+[node name="Move_selected" type="Button" parent="."]
+unique_name_in_owner = true
+z_index = 2
+offset_left = 110.0
+offset_top = -4.0
+offset_right = 126.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 14
+text = "T"
+flat = true
+
+[node name="Move_all" type="Button" parent="."]
+unique_name_in_owner = true
+z_index = 2
+clip_contents = true
+offset_left = 92.0
+offset_top = -4.0
+offset_right = 110.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 14
+text = "A"
+flat = true
+
+[node name="Visuals" type="HBoxContainer" parent="."]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 4.0
+offset_top = 81.0
+offset_right = 82.0
+offset_bottom = 92.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[connection signal="item_selected" from="ColorRect/Multi" to="." method="_on_multi_item_selected"]
+[connection signal="pressed" from="Move_selected" to="." method="_on_move_selected_pressed"]
+[connection signal="pressed" from="Move_all" to="." method="_on_move_all_pressed"]

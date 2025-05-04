@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=3 uid="uid://cpptlwsd8fy0f"]
+
+[ext_resource type="Texture2D" uid="uid://di0h8ou32avlr" path="res://Resources/Images/icon.svg" id="1_gp2gh"]
+[ext_resource type="Script" path="res://Scripts/info_card_unit_sript.gd" id="1_vxevv"]
+[ext_resource type="Theme" uid="uid://dfeo3ebchf3ul" path="res://Resources/Themes/Default_Theme.tres" id="2_e3pej"]
+[ext_resource type="FontFile" uid="uid://bluv55eae1l0b" path="res://Resources/Fonts/dogica/OTF/dogicapixelbold.otf" id="3_0r2tf"]
+
+[node name="InfoCardUnit" type="Window"]
+size = Vector2i(280, 300)
+unresizable = true
+theme = ExtResource("2_e3pej")
+script = ExtResource("1_vxevv")
+
+[node name="BG" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 180.0
+offset_bottom = 525.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.911632, 0.846132, 0.904853, 1)
+
+[node name="Img" type="Sprite2D" parent="BG"]
+texture_filter = 1
+position = Vector2(140, 80)
+scale = Vector2(2, 1.08)
+texture = ExtResource("1_gp2gh")
+
+[node name="Desc" type="Label" parent="BG"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 161.0
+offset_right = -180.0
+offset_bottom = 300.0
+grow_horizontal = 2
+theme = ExtResource("2_e3pej")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_0r2tf")
+theme_override_font_sizes/font_size = 8
+text = "Unit_DESC"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[connection signal="close_requested" from="." to="." method="_on_close_requested"]
+[connection signal="focus_exited" from="." to="." method="_on_focus_exited"]

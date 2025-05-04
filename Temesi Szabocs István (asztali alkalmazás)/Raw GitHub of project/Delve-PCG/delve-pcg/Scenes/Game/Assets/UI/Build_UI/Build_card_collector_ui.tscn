@@ -1,0 +1,119 @@
+[gd_scene load_steps=3 format=3 uid="uid://csvf5viyl0ke8"]
+
+[ext_resource type="Script" path="res://Scripts/build_card_collector_script.gd" id="1_xcgic"]
+[ext_resource type="Theme" uid="uid://dfeo3ebchf3ul" path="res://Resources/Themes/Default_Theme.tres" id="2_57ibj"]
+
+[node name="BuildCardCollectorUi" type="Node2D"]
+position = Vector2(0.145, 0)
+scale = Vector2(1, 0.92)
+script = ExtResource("1_xcgic")
+
+[node name="Card_bg" type="ColorRect" parent="."]
+unique_name_in_owner = true
+offset_right = 1745.0
+offset_bottom = 818.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Card_collector" type="CanvasLayer" parent="Card_bg"]
+unique_name_in_owner = true
+layer = 2
+
+[node name="Placer" type="Node2D" parent="Card_bg"]
+unique_name_in_owner = true
+position = Vector2(25, 30)
+
+[node name="HScrollBar" type="HScrollBar" parent="Card_bg"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -33.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("2_57ibj")
+max_value = 300.0
+page = 2.0
+custom_step = 1.0
+metadata/_edit_use_anchors_ = true
+
+[node name="TempRoomPlacer" type="Node2D" parent="Card_bg"]
+unique_name_in_owner = true
+position = Vector2(12, 0)
+
+[node name="Label" type="Label" parent="Card_bg"]
+layout_mode = 0
+offset_left = 157.855
+offset_top = 20.0
+offset_right = 247.855
+offset_bottom = 69.0
+theme = ExtResource("2_57ibj")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "<--Selected
+Room"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Filter" type="ColorRect" parent="Card_bg"]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 8.0
+offset_right = 1256.0
+offset_bottom = 88.0
+color = Color(0.838897, 0.838897, 0.838897, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Card_bg/Filter"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.006
+anchor_top = -0.0875
+anchor_right = 0.123
+anchor_bottom = 0.0875
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 98.0
+offset_bottom = 72.0
+theme = ExtResource("2_57ibj")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 27
+text = "Filters:"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Filter_button_collector" type="HBoxContainer" parent="Card_bg/Filter"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.116
+anchor_right = 0.116
+offset_left = 104.0
+offset_top = 8.0
+offset_right = 992.0
+offset_bottom = 72.0
+metadata/_edit_use_anchors_ = true
+
+[node name="CloseBuildWindow" type="Button" parent="."]
+unique_name_in_owner = true
+offset_left = 1690.0
+offset_top = 19.0
+offset_right = 1730.0
+offset_bottom = 70.0
+theme = ExtResource("2_57ibj")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 0)
+theme_override_font_sizes/font_size = 30
+text = "X"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="value_changed" from="Card_bg/HScrollBar" to="." method="_on_h_scroll_bar_value_changed"]
+[connection signal="pressed" from="CloseBuildWindow" to="." method="_on_close_build_window_pressed"]

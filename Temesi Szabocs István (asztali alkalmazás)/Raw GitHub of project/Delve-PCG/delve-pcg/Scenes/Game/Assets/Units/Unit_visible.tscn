@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://c2wqhp4mmoqt4"]
+
+[ext_resource type="Texture2D" uid="uid://btx4ggah7hprg" path="res://Resources/Images/Rooms/rooms_units.png" id="1_ptwss"]
+
+[node name="UnitVisible" type="ColorRect"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -895.5
+offset_top = -451.0
+offset_right = -849.5
+offset_bottom = -443.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+mouse_filter = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(23, -20)
+scale = Vector2(4, 4)
+texture = ExtResource("1_ptwss")
+region_enabled = true
+region_rect = Rect2(281, 106, 8, 10)

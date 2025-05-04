@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bfbrgy12ay51u"]
+
+[ext_resource type="Theme" uid="uid://dfeo3ebchf3ul" path="res://Resources/Themes/Default_Theme.tres" id="1_ppl1a"]
+[ext_resource type="Script" path="res://Scripts/filter_button_script.gd" id="1_svvt4"]
+
+[node name="FilterButtonUi" type="Button"]
+theme = ExtResource("1_ppl1a")
+text = "texttexttext"
+script = ExtResource("1_svvt4")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

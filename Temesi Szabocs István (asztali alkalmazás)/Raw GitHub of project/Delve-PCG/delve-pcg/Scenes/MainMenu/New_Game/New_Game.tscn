@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://580mau1c4q3m"]
+
+[ext_resource type="Script" path="res://Scripts/new_game_setting_script.gd" id="1_qyrjb"]
+[ext_resource type="Theme" uid="uid://dfeo3ebchf3ul" path="res://Resources/Themes/Default_Theme.tres" id="2_j6soj"]
+
+[node name="NewGame" type="Node2D"]
+script = ExtResource("1_qyrjb")
+
+[node name="Button" type="Button" parent="."]
+texture_filter = 1
+offset_left = 902.0
+offset_top = 419.0
+offset_right = 992.0
+offset_bottom = 450.0
+theme = ExtResource("2_j6soj")
+text = "New game"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

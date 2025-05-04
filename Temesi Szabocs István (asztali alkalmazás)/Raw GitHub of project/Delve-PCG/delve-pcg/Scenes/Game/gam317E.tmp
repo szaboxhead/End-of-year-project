@@ -1,0 +1,169 @@
+[gd_scene load_steps=3 format=3 uid="uid://dpev85trkokuu"]
+
+[ext_resource type="Script" path="res://Scripts/main_game_script.gd" id="1_yuuie"]
+[ext_resource type="Script" path="res://Scripts/camera_and_ui.gd" id="2_bxc6k"]
+
+[node name="Game" type="Node2D"]
+position = Vector2(480, 270)
+script = ExtResource("1_yuuie")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(464, 288)
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
+script = ExtResource("2_bxc6k")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Camera2D"]
+
+[node name="ColorRect" type="ColorRect" parent="Camera2D/CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -873.5
+offset_top = 328.0
+offset_right = 872.5
+offset_bottom = 492.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+mouse_filter = 2
+
+[node name="RegenerateMapp" type="Button" parent="Camera2D/CanvasLayer/ColorRect"]
+layout_mode = 0
+offset_left = 74.0
+offset_top = 6.0
+offset_right = 171.0
+offset_bottom = 37.0
+text = "Regenerate"
+
+[node name="InfiniteMaterials" type="Button" parent="Camera2D/CanvasLayer/ColorRect"]
+layout_mode = 0
+offset_left = 186.0
+offset_top = 6.0
+offset_right = 302.0
+offset_bottom = 37.0
+text = "Add materials"
+
+[node name="StateLabel" type="Label" parent="Camera2D/CanvasLayer/ColorRect"]
+layout_mode = 0
+offset_left = 78.0
+offset_top = 46.0
+offset_right = 186.0
+offset_bottom = 69.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Current state:"
+
+[node name="CurrentState" type="Label" parent="Camera2D/CanvasLayer/ColorRect/StateLabel"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 113.0
+offset_top = 1.0
+offset_right = 153.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "0"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Camera2D/CanvasLayer/ColorRect"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -91.0
+offset_right = 91.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Titles" type="HBoxContainer" parent="Camera2D/CanvasLayer/ColorRect/VBoxContainer"]
+layout_mode = 2
+
+[node name="GoldLabel" type="Label" parent="Camera2D/CanvasLayer/ColorRect/VBoxContainer/Titles"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.701961, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 0, 1)
+theme_override_constants/outline_size = 7
+text = "Trade Goods"
+
+[node name="SilverLabel" type="Label" parent="Camera2D/CanvasLayer/ColorRect/VBoxContainer/Titles"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.741385, 0.741385, 0.741385, 1)
+theme_override_colors/font_outline_color = Color(0.393086, 0.393086, 0.393085, 1)
+theme_override_constants/outline_size = 7
+text = "Resources"
+
+[node name="Values" type="HBoxContainer" parent="Camera2D/CanvasLayer/ColorRect/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="CurrentGold" type="Label" parent="Camera2D/CanvasLayer/ColorRect/VBoxContainer/Values"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.701961, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 0, 1)
+theme_override_constants/outline_size = 7
+text = "Trade Goods"
+
+[node name="CurrentSilver" type="Label" parent="Camera2D/CanvasLayer/ColorRect/VBoxContainer/Values"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.741385, 0.741385, 0.741385, 1)
+theme_override_colors/font_outline_color = Color(0.393086, 0.393086, 0.393085, 1)
+theme_override_constants/outline_size = 7
+text = "Resources"
+
+[node name="ColorRect" type="ColorRect" parent="Camera2D/CanvasLayer/ColorRect/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+color = Color(0.812077, 0.915539, 1, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Camera2D/CanvasLayer/ColorRect/VBoxContainer/ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Camera2D/CanvasLayer/ColorRect/VBoxContainer/ColorRect/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="ToGold" type="Button" parent="Camera2D/CanvasLayer/ColorRect/VBoxContainer/ColorRect/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 9
+text = "To Trade Goods"
+
+[node name="ToSilver" type="Button" parent="Camera2D/CanvasLayer/ColorRect/VBoxContainer/ColorRect/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "To Resources"
+
+[node name="Label" type="Label" parent="Camera2D/CanvasLayer/ColorRect/VBoxContainer/ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "1 TG=  2 R"
+horizontal_alignment = 1
+
+[node name="TradeDone" type="Button" parent="Camera2D/CanvasLayer/ColorRect/VBoxContainer/ColorRect/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "Done"
+
+[node name="Build_Menu" type="CanvasLayer" parent="Camera2D"]
+
+[node name="RoomCollector" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="WW_Menu" type="CanvasLayer" parent="RoomCollector"]
+
+[connection signal="pressed" from="Camera2D/CanvasLayer/ColorRect/RegenerateMapp" to="." method="_on_regenerate_mapp_pressed"]
+[connection signal="pressed" from="Camera2D/CanvasLayer/ColorRect/InfiniteMaterials" to="." method="_on_infinite_materials_pressed"]
+[connection signal="pressed" from="Camera2D/CanvasLayer/ColorRect/VBoxContainer/ColorRect/VBoxContainer/HBoxContainer/ToGold" to="." method="_on_to_gold_pressed"]
+[connection signal="pressed" from="Camera2D/CanvasLayer/ColorRect/VBoxContainer/ColorRect/VBoxContainer/HBoxContainer/ToSilver" to="." method="_on_to_silver_pressed"]
+[connection signal="pressed" from="Camera2D/CanvasLayer/ColorRect/VBoxContainer/ColorRect/VBoxContainer/TradeDone" to="." method="_on_trade_done_pressed"]

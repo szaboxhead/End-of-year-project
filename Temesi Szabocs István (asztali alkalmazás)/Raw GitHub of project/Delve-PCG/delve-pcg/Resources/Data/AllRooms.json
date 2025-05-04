@@ -1,0 +1,261 @@
+[
+	{
+		"Name": "ENTRANCE",
+		"Subtype": "UNIT ROOM",
+		"Cost": "-1_-1",
+		"Quote": "The only connenction to the Mountainhome",
+		"Description":"The entrance for your fort. Protect it at all cost. Once captured by an enemy the game is ower."
+	},
+	{
+		"Name": "BARRACKS",
+		"Subtype": "UNIT ROOM",
+		"Cost": "0_8",
+		"Quote": "Soldiers, the meat of your hold’s army, need somewhere to live after all.",
+		"Description":"A Barracks allows you to recruit Soldiers and Gunners. Each Barracks can hold 10 Soldiers or 10 Gunners."
+	},
+	{
+		"Name": "CANNON_OUTPOST",
+		"Subtype": "UNIT ROOM",
+		"Cost": "0_10",
+		"Quote": "Somewhere for the beautiful metal beasts to rest and feast.",
+		"Description":"Each Cannon Outpost can house up to 2 Cannons."
+	},
+	{
+		"Name": "FORGE",
+		"Subtype": "UNIT ROOM",
+		"Cost": "7_15",
+		"Quote": "With molten steel and pounding hammers the smiths create weapons of war.",
+		"Description":"Each Forge can house 1 Cannon."
+	},
+	{
+		"Name": "LABORATORY",
+		"Subtype": "UNIT ROOM",
+		"Cost": "10_5",
+		"Quote": "Mostly a hub for alchemists to argue about the best way to make gold.",
+		"Description":"Each grid worth of Laboratories can house 10 Alchemists. At the start of every turn in which you have 50+ Alchemists, draw a card. If you draw the A♠, a laboratory explodes, killing all Units within, and damaging the nearest two rooms. If you get the K♦, your dwarves have learned the art of transmutation: for the rest of the game, you may trade one Resource (♥) for three Trade Goods (♦)."
+	},
+	{
+		"Name": "OVERSEERS_OFFICE",
+		"Subtype": "BUFFING ROOM",
+		"Cost": "0_15",
+		"Quote": "A well-organised half dozen is worth a hundred clueless apprentices.",
+		"Description":"Any ♦ cards revealed when exploring in the same column as an Overseer’s e are worth double."
+	},
+	{
+		"Name": "SHRINE",
+		"Subtype": "BUFFING ROOM",
+		"Cost": "0_20",
+		"Quote": "A monument to the ancestors, the mountain spirits, or the gods.",
+		"Description":"Shrines can house a single Cleric."
+	},
+	{
+		"Name": "STOCKPILE",
+		"Subtype": "BUFFING ROOM",
+		"Cost": "0_20",
+		"Quote": "Heaving resources back and forth through the hold is backbreaking; this eases that ache",
+		"Description":"Increase your maximum Resource supply by 50. If you have more than 100 Resources in your supply, and you draw the J♣, pests have targeted your hold: roll 1D4. On a 1, stone mites have eaten ½ your Resources, rounded down. On a 2+, spawn a displaced elemental (60 STR) at your Stockpile at the lowest depth, and enter combat."
+	},
+	{
+		"Name": "STOREHOUSE",
+		"Subtype": "BUFFING ROOM",
+		"Cost": "0_15",
+		"Quote": "How many tools do dwarves lose in a project? Less with a storehouse.",
+		"Description":"Rooms built on this floor cost ½ ♥."
+	},
+	{
+		"Name": "TREASURY",
+		"Subtype": "BUFFING ROOM",
+		"Cost": "0_20",
+		"Quote": "Diamonds are a dwarf ’s best friend, treat them well.",
+		"Description":"Increase your maximum Trade Goods supply by 50. If you have more than 100 Trade Goods in your supply, and you draw the J♠, thieves have targeted your hold: roll 1D4. On a 1, a group of thieves steal ½ of your Trade Goods, rounded down. On a 2+, spawn a group of thieves (40 STR) at your lowest Treasury and enter combat. Thieves do not trigger traps and can use your secret passages. If they reach the stairwell, you lose ½ your Trade Goods but the hold does not fall (combat ends if they are the only enemies in the hold)."
+	},
+	{
+		"Name": "VOID_CRYSTAL",
+		"Subtype": "VOID_CRYSTAL",
+		"Cost": "-1_-1",
+		"Quote": "A deep purple and black crystal pulsing with energy",
+		"Description":"Once found the game can be ended at any time."
+	},
+	{
+		"Name": "TRADE_GOOD",
+		"Subtype": "NATURAL FORMATION",
+		"Cost": "-1_-1",
+		"Quote": "Gold, gems or anytihin shiny.",
+		"Description":"Gain a random amount of trade goods + depth of room."
+	},
+	{
+		"Name": "RESOURCE",
+		"Subtype": "NATURAL FORMATION",
+		"Cost": "-1_-1",
+		"Quote": "Whatever makes a good building material down here.",
+		"Description":"Gain a random amount of resources + depth of room."
+	},
+	{
+		"Name": "UNDERGROUND_FOREST",
+		"Subtype": "NATURAL FORMATION",
+		"Cost": "-1_-1",
+		"Quote": "A lush forest, somehow thriving despite the lack of sunlight",
+		"Description":"Gain 1 resource/underground forest or cut it down to make space for a room."
+	},
+	{
+		"Name": "GAS-FILLED_CHAMBER",
+		"Subtype": "NATURAL FORMATION",
+		"Cost": "-1_-1",
+		"Quote": "Different kinds of gas mix here, most of them poison, best not to breath in.",
+		"Description":"Various gases linger here: \nPoison gas: instantly defeats units in affected grid spaces\nFlammable gas: explodes if lit, damages rooms and defeats units, Blinding gas: blocks Ranged"
+	},
+	{
+		"Name": "UNDERGROUND_RIVER",
+		"Subtype": "NATURAL FORMATION",
+		"Cost": "-1_-1",
+		"Quote": "",
+		"Description":"Flowing with water. Cannot be drained."
+	},
+	{
+		"Name": "CAVERN",
+		"Subtype": "NATURAL FORMATION",
+		"Cost": "-1_-1",
+		"Quote": "",
+		"Description":"An empty cavern."
+	},
+	{
+		"Name": "CRYSTAL_CAVERN",
+		"Subtype": "NATURAL FORMATION",
+		"Cost": "-1_-1",
+		"Quote": "",
+		"Description":"Gain a random amount + depth of Trade Goods each turn. Has a low chan of being destroyed ech turn."
+	},
+	{
+		"Name": "MAGMA_FLOW",
+		"Subtype": "NATURAL FORMATION",
+		"Cost": "-1_-1",
+		"Quote": "",
+		"Description":"Flowing with lava. Cannot be drained."
+	},
+	{
+		"Name": "UNDERGROUND_LAKE",
+		"Subtype": "NATURAL FORMATION",
+		"Cost": "-1_-1",
+		"Quote": "",
+		"Description":"Filled with water. Drain it to build here"
+	},
+	{
+		"Name": "HIVE_OF_CREATURES",
+		"Subtype": "NATURAL FORMATION",
+		"Cost": "-1_-1",
+		"Quote": "",
+		"Description":"A hive of hostile creatures. Once discovered spawns creaturs once with a strength of 10."
+	},
+	{
+		"Name": "VOLCANIC_SHAFT",
+		"Subtype": "NATURAL FORMATION",
+		"Cost": "-1_-1",
+		"Quote": "",
+		"Description":"A long vertical shaft with lava at the bottom."
+	},
+	{
+		"Name": "CAVERN_WITH_LARGE_CREATURE",
+		"Subtype": "NATURAL FORMATION",
+		"Cost": "-1_-1",
+		"Quote": "",
+		"Description":"Cavern with a large neutral creature"
+	},
+	{
+		"Name": "MONSTER_VILLAGE",
+		"Subtype": "REMNANT",
+		"Cost": "-1_-1",
+		"Quote": "",
+		"Description":"A village of monsters of various shapse and sizes. Once discovered spawns monsters once with a strength of 10."
+	},
+	{
+		"Name": "FORGOTTEN_CRYPTS",
+		"Subtype": "REMNANT",
+		"Cost": "-1_-1",
+		"Quote": "",
+		"Description":"Once cleared can be used to recrut skull dwarves."
+	},
+	{
+		"Name": "WISHING_WELL",
+		"Subtype": "REMNANT",
+		"Cost": "-1_-1",
+		"Quote": "",
+		"Description":"A wish can be made for 10 trade goods, either a good or bad magic will triger randomly."
+	},
+	{
+		"Name": "ABANDONED_MINE",
+		"Subtype": "REMNANT",
+		"Cost": "-1_-1",
+		"Quote": "",
+		"Description":" Gain 20 trade goods, plus 2 trade goods multiplied by the depth of this room."
+	},
+	{
+		"Name": "BURRIED_TEMPLE",
+		"Subtype": "REMNANT",
+		"Cost": "-1_-1",
+		"Quote": "",
+		"Description":"Find an anchient cleric."
+	},
+	{
+		"Name": "DEMON_PORAL",
+		"Subtype": "REMNANT",
+		"Cost": "-1_-1",
+		"Quote": "",
+		"Description":"Summons demons each turn until closed by sacreficeing a cleric and 20 trade goods"
+	},
+	{
+		"Name": "GOLEM_FORGE",
+		"Subtype": "REMNANT",
+		"Cost": "-1_-1",
+		"Quote": "",
+		"Description":"Once captured can be used to recruit golems."
+	},
+	{
+		"Name": "SLUMBERING_WYRM",
+		"Subtype": "REMNANT",
+		"Cost": "-1_-1",
+		"Quote": "",
+		"Description":"Once per turn, you may steal 20 trade goods. Watch out as the wyrm might wake up"
+	},
+	{
+		"Name": "HALLS_OF_THE_LICH_KING",
+		"Subtype": "REMNANT",
+		"Cost": "-1_-1",
+		"Quote": "",
+		"Description":"A big load of undead each with 20 strength"
+	},
+	{
+		"Name": "BONE_CAVE",
+		"Subtype": "WYRD",
+		"Cost": "-1_-1",
+		"Quote": "",
+		"Description":"A cavern supported by the bones of an ancient beast."
+	},
+	{
+		"Name": "MEAT_CAVE",
+		"Subtype": "WYRD",
+		"Cost": "-1_-1",
+		"Quote": "",
+		"Description":" No stone, just meat and organs, in a twisted parody of life."
+	},
+	{
+		"Name": "MOLE_VILLAGE",
+		"Subtype": "WYRD",
+		"Cost": "-1_-1",
+		"Quote": "",
+		"Description":"Behold, a village of mole people! Can recruit moles here!"
+	},
+	{
+		"Name": "SMART_CREATURE",
+		"Subtype": "WYRD",
+		"Cost": "-1_-1",
+		"Quote": "",
+		"Description":"Once per turn you may pay 5 trade goods to check if a room has any danges in it."
+	},
+	{
+		"Name": "REALM_OF_LOST_THINGS",
+		"Subtype": "WYRD",
+		"Cost": "-1_-1",
+		"Quote": "",
+		"Description":"Ech turn either gan a random amount nof trade goods or a random unit"
+	}
+]

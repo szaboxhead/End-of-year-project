@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bk4un126mkltp"]
+
+[ext_resource type="Theme" uid="uid://dfeo3ebchf3ul" path="res://Resources/Themes/Default_Theme.tres" id="1_kqtbx"]
+
+[node name="LogBluUi" type="Label"]
+theme = ExtResource("1_kqtbx")
+text = "This is a White log"
+autowrap_mode = 3

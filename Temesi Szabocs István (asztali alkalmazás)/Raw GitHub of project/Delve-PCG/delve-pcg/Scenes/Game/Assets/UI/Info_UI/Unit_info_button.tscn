@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0kyv680ma32b"]
+
+[ext_resource type="Theme" uid="uid://dfeo3ebchf3ul" path="res://Resources/Themes/Default_Theme.tres" id="1_fsexs"]
+[ext_resource type="FontFile" uid="uid://bluv55eae1l0b" path="res://Resources/Fonts/dogica/OTF/dogicapixelbold.otf" id="1_yjc2d"]
+[ext_resource type="Script" path="res://Scripts/unit_info_button_sript.gd" id="2_0rfv3"]
+
+[node name="UnitInfoButton" type="Button"]
+texture_filter = 1
+size_flags_vertical = 4
+theme = ExtResource("1_fsexs")
+theme_override_fonts/font = ExtResource("1_yjc2d")
+theme_override_font_sizes/font_size = 8
+script = ExtResource("2_0rfv3")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

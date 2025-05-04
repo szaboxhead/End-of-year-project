@@ -1,0 +1,94 @@
+[gd_scene load_steps=6 format=3 uid="uid://dhf50ffw18fe2"]
+
+[ext_resource type="Script" path="res://Scripts/info_card_script.gd" id="1_bxgpo"]
+[ext_resource type="Theme" uid="uid://dfeo3ebchf3ul" path="res://Resources/Themes/Default_Theme.tres" id="2_lfrjt"]
+[ext_resource type="Texture2D" uid="uid://dgrcu5sb8c86e" path="res://Resources/Images/Rooms/rooms.png" id="2_yfdgo"]
+[ext_resource type="FontFile" uid="uid://b6qn4wet6lij7" path="res://Resources/Fonts/dogica/OTF/dogicabold.otf" id="3_f2g7e"]
+[ext_resource type="FontFile" uid="uid://bluv55eae1l0b" path="res://Resources/Fonts/dogica/OTF/dogicapixelbold.otf" id="4_d4x8i"]
+
+[node name="InfoCard" type="Window"]
+title = "Room_name"
+position = Vector2i(0, 36)
+size = Vector2i(280, 625)
+unresizable = true
+theme = ExtResource("2_lfrjt")
+script = ExtResource("1_bxgpo")
+
+[node name="BG" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.911632, 0.846132, 0.904853, 1)
+
+[node name="Img" type="Sprite2D" parent="BG"]
+unique_name_in_owner = true
+texture_filter = 1
+position = Vector2(138, 77)
+scale = Vector2(7.63, 7.63)
+texture = ExtResource("2_yfdgo")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 18)
+
+[node name="Desc" type="Label" parent="BG"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 161.0
+offset_bottom = 300.0
+grow_horizontal = 2
+theme = ExtResource("2_lfrjt")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_d4x8i")
+theme_override_font_sizes/font_size = 8
+text = "Room_DESC"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Separator" type="ColorRect" parent="BG"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_left = -1.0
+offset_top = 300.0
+offset_right = 299.0
+offset_bottom = 310.0
+color = Color(0.25098, 0.25098, 0.25098, 1)
+
+[node name="Empty_room" type="Button" parent="BG"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_top = 287.02
+offset_right = 280.0
+offset_bottom = 318.02
+text = "Empty room for XXX Resources"
+
+[node name="Unit_titile" type="Label" parent="BG"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -1.0
+offset_top = 310.0
+offset_right = -1.0
+offset_bottom = 342.0
+grow_horizontal = 2
+theme = ExtResource("2_lfrjt")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_f2g7e")
+text = "Units"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Unit_Collector" type="VBoxContainer" parent="BG"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[connection signal="close_requested" from="." to="." method="_on_close_requested"]
+[connection signal="focus_exited" from="." to="." method="_on_focus_exited"]
+[connection signal="pressed" from="BG/Empty_room" to="." method="_on_empty_room_pressed"]

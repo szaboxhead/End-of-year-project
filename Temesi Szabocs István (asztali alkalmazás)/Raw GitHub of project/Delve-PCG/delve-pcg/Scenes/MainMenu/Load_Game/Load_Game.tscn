@@ -1,0 +1,174 @@
+[gd_scene load_steps=5 format=3 uid="uid://dpbp407q3trq0"]
+
+[ext_resource type="Script" path="res://Scripts/load_game_menu_script.gd" id="1_4emry"]
+[ext_resource type="Theme" uid="uid://dfeo3ebchf3ul" path="res://Resources/Themes/Default_Theme.tres" id="2_ciulk"]
+[ext_resource type="Texture2D" uid="uid://tek5lkhtjf77" path="res://Resources/Images/LDSV-BG.png" id="3_c42ns"]
+[ext_resource type="Texture2D" uid="uid://cxg34uwmw8r0m" path="res://Resources/Images/LDSV-Letter.png" id="4_106n6"]
+
+[node name="LoadGame" type="Node2D"]
+script = ExtResource("1_4emry")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 492.0
+offset_top = 36.0
+offset_right = 1273.0
+offset_bottom = 932.0
+color = Color(1, 1, 1, 0)
+
+[node name="Tittle" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_right = 780.0
+offset_bottom = 156.0
+theme = ExtResource("2_ciulk")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 56
+text = "Local and Cloud saves:"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Local" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 156.0
+offset_right = 740.0
+offset_bottom = 184.0
+theme = ExtResource("2_ciulk")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Local"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VScrollBar" type="VScrollBar" parent="ColorRect"]
+visible = false
+layout_mode = 0
+offset_left = 720.0
+offset_top = 184.0
+offset_right = 742.0
+offset_bottom = 468.0
+step = 1.0
+
+[node name="Save_collector" type="VBoxContainer" parent="ColorRect"]
+unique_name_in_owner = true
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = 184.0
+offset_right = -40.0
+offset_bottom = -424.99
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Save_placer" type="Node2D" parent="ColorRect/Save_collector"]
+unique_name_in_owner = true
+
+[node name="HSeparator" type="HSeparator" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = 20.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Cloud" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_top = 500.0
+offset_right = 780.0
+offset_bottom = 528.0
+theme = ExtResource("2_ciulk")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Cloud"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Cloud_collector" type="VBoxContainer" parent="ColorRect"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 43.0
+offset_top = 532.0
+offset_right = 740.0
+offset_bottom = 996.0
+
+[node name="Cloud_placer" type="Node2D" parent="ColorRect/Cloud_collector"]
+unique_name_in_owner = true
+
+[node name="HTTPRequest" type="HTTPRequest" parent="ColorRect"]
+unique_name_in_owner = true
+
+[node name="Login" type="VBoxContainer" parent="ColorRect"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 40.0
+offset_top = 532.0
+offset_right = 740.0
+offset_bottom = 878.0
+
+[node name="Tittle" type="Label" parent="ColorRect/Login"]
+layout_mode = 2
+size_flags_vertical = 6
+theme = ExtResource("2_ciulk")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Please log in:"
+horizontal_alignment = 1
+
+[node name="Email_input" type="LineEdit" parent="ColorRect/Login"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 6
+theme = ExtResource("2_ciulk")
+theme_override_font_sizes/font_size = 32
+placeholder_text = "E-mail"
+
+[node name="Pass_input" type="LineEdit" parent="ColorRect/Login"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 6
+theme = ExtResource("2_ciulk")
+theme_override_font_sizes/font_size = 32
+placeholder_text = "Password"
+
+[node name="Button_login" type="Button" parent="ColorRect/Login"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme = ExtResource("2_ciulk")
+theme_override_font_sizes/font_size = 32
+text = "Log-in"
+
+[node name="DarkScreen" type="ColorRect" parent="."]
+unique_name_in_owner = true
+z_index = 100
+offset_left = -245.0
+offset_top = -54.0
+offset_right = 2034.0
+offset_bottom = 1104.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
+[node name="Ldsv-bg" type="Sprite2D" parent="."]
+z_index = -2
+texture_filter = 1
+position = Vector2(878, 489)
+scale = Vector2(10.0287, 10.0204)
+texture = ExtResource("3_c42ns")
+
+[node name="Ldsv-letter" type="Sprite2D" parent="."]
+z_index = -1
+texture_filter = 1
+position = Vector2(882, 493.5)
+scale = Vector2(10.0287, 9.96939)
+texture = ExtResource("4_106n6")
+
+[connection signal="value_changed" from="ColorRect/VScrollBar" to="." method="_on_v_scroll_bar_value_changed"]
+[connection signal="request_completed" from="ColorRect/HTTPRequest" to="." method="_on_http_request_request_completed"]
+[connection signal="pressed" from="ColorRect/Login/Button_login" to="." method="_on_button_login_pressed"]

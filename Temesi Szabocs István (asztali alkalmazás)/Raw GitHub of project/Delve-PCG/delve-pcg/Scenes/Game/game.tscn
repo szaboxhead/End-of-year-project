@@ -1,0 +1,437 @@
+[gd_scene load_steps=12 format=3 uid="uid://dpev85trkokuu"]
+
+[ext_resource type="Script" path="res://Scripts/main_game_script.gd" id="1_yuuie"]
+[ext_resource type="Script" path="res://Scripts/camera_and_ui.gd" id="2_bxc6k"]
+[ext_resource type="FontFile" uid="uid://do0kps6lpmtqw" path="res://Resources/Fonts/dogica/OTF/dogica.otf" id="3_5tahv"]
+[ext_resource type="Script" path="res://Scripts/event_log_movement_script.gd" id="3_36wcb"]
+[ext_resource type="Texture2D" uid="uid://c3p6xw6yixa35" path="res://Resources/Images/UI/Ingame/ui.png" id="3_pnm4j"]
+[ext_resource type="Theme" uid="uid://dfeo3ebchf3ul" path="res://Resources/Themes/Default_Theme.tres" id="5_f7a8f"]
+[ext_resource type="Texture2D" uid="uid://b2cojra43yauc" path="res://Resources/Images/Rooms/Border.png" id="7_1ypi7"]
+[ext_resource type="AudioStream" uid="uid://c620jh8cwdfh4" path="res://Resources/Music/Stroll-Through-a-Strange-Land.mp3" id="8_8i3l7"]
+[ext_resource type="AudioStream" uid="uid://botklhjgsmrm0" path="res://Resources/Music/Room_effects/rock-tumble-2-79986.mp3" id="8_dw23b"]
+[ext_resource type="AudioStream" uid="uid://dcxqu6w18pcqe" path="res://Resources/Music/Room_effects/metal-hammer-on-metal-62676.mp3" id="9_eqp3g"]
+[ext_resource type="AudioStream" uid="uid://b0j21voxdr7ek" path="res://Resources/Music/Room_effects/blade-scrape-sfx-2-308108.mp3" id="10_yqt6l"]
+
+[node name="Game" type="Node2D"]
+position = Vector2(480, 270)
+script = ExtResource("1_yuuie")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(393, 221)
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
+script = ExtResource("2_bxc6k")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Camera2D"]
+
+[node name="DarkScreen" type="ColorRect" parent="Camera2D/CanvasLayer"]
+unique_name_in_owner = true
+z_index = 100
+offset_top = -1.0
+offset_right = 1745.0
+offset_bottom = 984.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
+[node name="Tray" type="Sprite2D" parent="Camera2D/CanvasLayer"]
+unique_name_in_owner = true
+texture_filter = 1
+position = Vector2(874.439, 491.5)
+scale = Vector2(2.0102, 2.0102)
+texture = ExtResource("3_pnm4j")
+
+[node name="RegenerateMapp" type="Button" parent="Camera2D/CanvasLayer/Tray"]
+offset_left = -431.02
+offset_top = -240.523
+offset_right = -334.02
+offset_bottom = -209.523
+text = "Regenerate"
+
+[node name="InfiniteMaterials" type="Button" parent="Camera2D/CanvasLayer/Tray"]
+offset_left = -431.02
+offset_top = -205.523
+offset_right = -315.02
+offset_bottom = -174.523
+text = "Add materials"
+
+[node name="StateLabel" type="Label" parent="Camera2D/CanvasLayer/Tray"]
+offset_left = -192.239
+offset_top = -240.523
+offset_right = 2444.76
+offset_bottom = 27.4771
+scale = Vector2(0.15, 0.15)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 90
+theme_override_fonts/font = ExtResource("3_5tahv")
+theme_override_font_sizes/font_size = 180
+text = "Current state:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CurrentState" type="Label" parent="Camera2D/CanvasLayer/Tray/StateLabel"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 0.000202418
+offset_top = 305.11
+offset_right = 2521.0
+offset_bottom = 463.11
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 90
+theme_override_fonts/font = ExtResource("3_5tahv")
+theme_override_font_sizes/font_size = 180
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Camera2D/CanvasLayer/Tray"]
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -500.0
+offset_top = 142.0
+offset_right = -318.0
+offset_bottom = -209.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.72, 0.72)
+size_flags_horizontal = 4
+
+[node name="Titles" type="HBoxContainer" parent="Camera2D/CanvasLayer/Tray/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="GoldLabel" type="Label" parent="Camera2D/CanvasLayer/Tray/VBoxContainer/Titles"]
+layout_mode = 2
+theme = ExtResource("5_f7a8f")
+theme_override_colors/font_color = Color(1, 0.701961, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_font_sizes/font_size = 8
+text = "Trade Goods"
+
+[node name="SilverLabel" type="Label" parent="Camera2D/CanvasLayer/Tray/VBoxContainer/Titles"]
+layout_mode = 2
+theme = ExtResource("5_f7a8f")
+theme_override_colors/font_color = Color(0.741385, 0.741385, 0.741385, 1)
+theme_override_colors/font_outline_color = Color(0.393086, 0.393086, 0.393085, 1)
+theme_override_constants/outline_size = 7
+theme_override_font_sizes/font_size = 8
+text = "Resources"
+
+[node name="Values" type="Control" parent="Camera2D/CanvasLayer/Tray/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="CurrentGold" type="Label" parent="Camera2D/CanvasLayer/Tray/VBoxContainer/Values"]
+unique_name_in_owner = true
+layout_mode = 2
+offset_right = 88.0
+offset_bottom = 7.0
+theme = ExtResource("5_f7a8f")
+theme_override_colors/font_color = Color(0.702989, 0.437538, 0.312035, 1)
+theme_override_colors/font_outline_color = Color(0.975142, 0.975142, 7.70092e-06, 1)
+theme_override_constants/outline_size = 7
+theme_override_font_sizes/font_size = 8
+text = "Trade Goods"
+horizontal_alignment = 1
+
+[node name="CurrentSilver" type="Label" parent="Camera2D/CanvasLayer/Tray/VBoxContainer/Values"]
+unique_name_in_owner = true
+layout_mode = 2
+offset_left = 92.0
+offset_right = 180.0
+offset_bottom = 7.0
+theme = ExtResource("5_f7a8f")
+theme_override_colors/font_color = Color(0.741385, 0.741385, 0.741385, 1)
+theme_override_colors/font_outline_color = Color(0.393086, 0.393086, 0.393085, 1)
+theme_override_constants/outline_size = 7
+theme_override_font_sizes/font_size = 8
+text = "Resources"
+horizontal_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="Camera2D/CanvasLayer/Tray/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+color = Color(0.811765, 0.913725, 1, 0)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Camera2D/CanvasLayer/Tray/VBoxContainer/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -83.0
+offset_top = -57.0
+offset_right = 82.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Camera2D/CanvasLayer/Tray/VBoxContainer/ColorRect/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="ToGold" type="Button" parent="Camera2D/CanvasLayer/Tray/VBoxContainer/ColorRect/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("5_f7a8f")
+text = "+1TG"
+
+[node name="ToSilver" type="Button" parent="Camera2D/CanvasLayer/Tray/VBoxContainer/ColorRect/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("5_f7a8f")
+text = "+2R"
+
+[node name="Label" type="Label" parent="Camera2D/CanvasLayer/Tray/VBoxContainer/ColorRect/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("5_f7a8f")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "1TG = 2R"
+horizontal_alignment = 1
+
+[node name="TradeDone" type="Button" parent="Camera2D/CanvasLayer/Tray/VBoxContainer/ColorRect/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("5_f7a8f")
+theme_override_font_sizes/font_size = 24
+disabled = true
+text = "Done"
+
+[node name="Search_room_dropdown" type="OptionButton" parent="Camera2D/CanvasLayer/Tray"]
+unique_name_in_owner = true
+offset_left = -236.02
+offset_top = -170.523
+offset_right = -204.02
+offset_bottom = -150.523
+
+[node name="Search_room" type="Button" parent="Camera2D/CanvasLayer/Tray"]
+offset_left = -431.02
+offset_top = -170.523
+offset_right = -256.02
+offset_bottom = -139.523
+text = "Search selected room"
+
+[node name="Label" type="Label" parent="Camera2D/CanvasLayer/Tray"]
+offset_left = -256.02
+offset_top = -166.523
+offset_right = -236.02
+offset_bottom = -143.523
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = ":"
+horizontal_alignment = 1
+
+[node name="Gray" type="ColorRect" parent="Camera2D/CanvasLayer/Tray"]
+offset_left = -179.0
+offset_top = 135.0
+offset_right = -32.0
+offset_bottom = 280.0
+scale = Vector2(0.695, 0.695)
+color = Color(0.847059, 0.847059, 0.847059, 0)
+
+[node name="Label" type="Label" parent="Camera2D/CanvasLayer/Tray/Gray"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 6.0
+offset_right = -52.0
+offset_bottom = 23.0
+grow_horizontal = 2
+scale = Vector2(1.55, 1.55)
+theme = ExtResource("5_f7a8f")
+theme_override_colors/font_color = Color(0.43758, 0.44, 0.3916, 1)
+theme_override_font_sizes/font_size = 8
+text = "Current action:"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Current_needed_action" type="Label" parent="Camera2D/CanvasLayer/Tray/Gray"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_top = 37.0
+offset_right = 147.0
+offset_bottom = 101.0
+theme = ExtResource("5_f7a8f")
+theme_override_colors/font_color = Color(0.43758, 0.44, 0.3916, 1)
+theme_override_font_sizes/font_size = 8
+text = "None"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="DisplayClickableRooms" type="Button" parent="Camera2D/CanvasLayer/Tray/Gray"]
+z_index = 1
+layout_mode = 0
+offset_left = 6.0
+offset_top = 101.0
+offset_right = 147.0
+offset_bottom = 143.0
+theme = ExtResource("5_f7a8f")
+theme_override_font_sizes/font_size = 16
+text = "Help"
+
+[node name="Combat_Done" type="Button" parent="Camera2D/CanvasLayer/Tray"]
+unique_name_in_owner = true
+z_index = 3
+offset_left = -70.3607
+offset_top = 245.001
+offset_right = 69.6393
+offset_bottom = 272.0
+theme = ExtResource("5_f7a8f")
+text = "Turn Done"
+
+[node name="Save_Button" type="Button" parent="Camera2D/CanvasLayer/Tray"]
+unique_name_in_owner = true
+offset_left = 70.0
+offset_top = 160.0
+offset_right = 232.0
+offset_bottom = 234.0
+theme = ExtResource("5_f7a8f")
+theme_override_colors/font_color = Color(0, 0.470588, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Save"
+
+[node name="Load_Button" type="Button" parent="Camera2D/CanvasLayer/Tray"]
+unique_name_in_owner = true
+visible = false
+offset_left = 1202.0
+offset_top = 36.0
+offset_right = 1363.0
+offset_bottom = 135.0
+theme_override_colors/font_color = Color(0, 0.470588, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 66
+text = "Load"
+
+[node name="Red" type="ColorRect" parent="Camera2D/CanvasLayer/Tray"]
+offset_left = -419.0
+offset_top = 142.0
+offset_right = -301.0
+offset_bottom = 293.0
+scale = Vector2(0.815, 0.815)
+color = Color(0.909804, 0.741176, 0.737255, 0.32549)
+
+[node name="MC_collector" type="VBoxContainer" parent="Camera2D/CanvasLayer/Tray/Red"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.040686
+offset_top = 0.218277
+offset_right = 0.0406799
+offset_bottom = 0.218277
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Build_Menu" type="CanvasLayer" parent="Camera2D"]
+unique_name_in_owner = true
+
+[node name="Round Start Collector" type="CanvasLayer" parent="Camera2D"]
+unique_name_in_owner = true
+
+[node name="Recruit_Menu" type="CanvasLayer" parent="Camera2D"]
+unique_name_in_owner = true
+
+[node name="Event_Log" type="CanvasLayer" parent="Camera2D"]
+script = ExtResource("3_36wcb")
+
+[node name="Log_BG" type="ColorRect" parent="Camera2D/Event_Log"]
+unique_name_in_owner = true
+offset_left = 1746.0
+offset_right = 2103.0
+offset_bottom = 1001.0
+color = Color(0, 0, 0, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Camera2D/Event_Log/Log_BG"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="Camera2D/Event_Log"]
+texture_filter = 1
+offset_left = 1699.0
+offset_top = 748.0
+offset_right = 1745.0
+offset_bottom = 983.0
+theme = ExtResource("5_f7a8f")
+theme_override_font_sizes/font_size = 26
+text = "Event
+Log"
+autowrap_mode = 3
+
+[node name="GameMusic" type="AudioStreamPlayer" parent="Camera2D"]
+unique_name_in_owner = true
+stream = ExtResource("8_8i3l7")
+volume_db = -80.0
+pitch_scale = 0.9
+parameters/looping = true
+
+[node name="RoomOpen" type="AudioStreamPlayer" parent="Camera2D"]
+unique_name_in_owner = true
+stream = ExtResource("8_dw23b")
+
+[node name="RoomBuilt" type="AudioStreamPlayer" parent="Camera2D"]
+unique_name_in_owner = true
+stream = ExtResource("9_eqp3g")
+pitch_scale = 1.25
+
+[node name="Recruited" type="AudioStreamPlayer" parent="Camera2D"]
+unique_name_in_owner = true
+stream = ExtResource("10_yqt6l")
+
+[node name="RoomCollector" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="WW_Menu" type="CanvasLayer" parent="RoomCollector"]
+
+[node name="Fluff" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="RoomBorder" type="NinePatchRect" parent="."]
+unique_name_in_owner = true
+texture_filter = 1
+offset_left = -5482.0
+offset_top = -219.0
+offset_right = -3616.0
+offset_bottom = 867.0
+texture = ExtResource("7_1ypi7")
+region_rect = Rect2(0, 12, 366, 282)
+patch_margin_left = 90
+patch_margin_top = 90
+patch_margin_right = 96
+patch_margin_bottom = 96
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="ColorRect" type="ColorRect" parent="RoomBorder"]
+z_index = -5
+layout_mode = 0
+offset_left = -1186.0
+offset_top = -1108.0
+offset_right = 3219.0
+offset_bottom = 1755.0
+mouse_filter = 2
+color = Color(0.08943, 0.0726, 0.11, 1)
+
+[connection signal="pressed" from="Camera2D/CanvasLayer/Tray/RegenerateMapp" to="." method="_on_regenerate_mapp_pressed"]
+[connection signal="pressed" from="Camera2D/CanvasLayer/Tray/InfiniteMaterials" to="." method="_on_infinite_materials_pressed"]
+[connection signal="pressed" from="Camera2D/CanvasLayer/Tray/VBoxContainer/ColorRect/VBoxContainer/HBoxContainer/ToGold" to="." method="_on_to_gold_pressed"]
+[connection signal="pressed" from="Camera2D/CanvasLayer/Tray/VBoxContainer/ColorRect/VBoxContainer/HBoxContainer/ToSilver" to="." method="_on_to_silver_pressed"]
+[connection signal="pressed" from="Camera2D/CanvasLayer/Tray/VBoxContainer/ColorRect/VBoxContainer/TradeDone" to="." method="_on_trade_done_pressed"]
+[connection signal="pressed" from="Camera2D/CanvasLayer/Tray/Search_room" to="." method="_on_search_room_pressed"]
+[connection signal="pressed" from="Camera2D/CanvasLayer/Tray/Gray/DisplayClickableRooms" to="." method="_on_display_clickable_rooms_pressed"]
+[connection signal="pressed" from="Camera2D/CanvasLayer/Tray/Combat_Done" to="." method="_on_combat_done_pressed"]
+[connection signal="pressed" from="Camera2D/CanvasLayer/Tray/Save_Button" to="." method="_on_save_button_pressed"]
+[connection signal="pressed" from="Camera2D/CanvasLayer/Tray/Load_Button" to="." method="_on_load_button_pressed"]
+[connection signal="pressed" from="Camera2D/Event_Log/Button" to="Camera2D/Event_Log" method="_on_button_pressed"]

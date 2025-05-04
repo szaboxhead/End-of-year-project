@@ -1,0 +1,33 @@
+*/login : (Recieves login data. If user is found and the data is correct returns OK status and the login data with hashed password. Else return ERROR and the login data with hashed password.)
+REQ: {"UID":"~E-mail address~","Pass":"~Non-Hashed Password~"}
+RES if OK:
+	 { type: "login", status: "OK", data: {"UID":"~E-mail address~","Pass":"~Hashed Password~"}}
+RES if NOT OK:
+	 { type: "login", status: "ERROR", data: {"UID":"~E-mail address~","Pass":"~Hashed Password~"}}
+
+*/saves : (Recieves login data with hashed password. If user is found and the data is correct returns OK and all user saved games. Else return EROOR and an empty array.)
+REQ: {"UID":"~E-mail address~","Pass":"~Hashed Password~"}
+RES if OK:
+	 { type: "saveGet", status: "OK", data: [{"gameData":"~Very Long Data String~"},{"gameData":"~Very Long Data String~"},{"gameData":"~Very Long Data String~"}]}
+RES if NOT OK:
+	 { type: "saveGet", status: "ERROR", data: []}
+
+*/upload : (Recieves login data with hashed password, the name of the save as filename and the to-be-saved data. If user is found and the data is correct returns OK and save sent data to DB. Else return EROOR.)
+REQ: {"UID":"~E-mail address~","Pass":"~Hashed Password~", "fileName":"~Name of the File With Extension~","Data":"~Very Long Data String~"}
+RES if OK: 
+	 { type: "upload", status: "OK"}
+RES if NOT OK:
+	 { type: "upload", status: "ERROR"}
+	 
+*/delete : (Recieves login data with hashed password and the name of the to-be-deleted save. If user is found and the data is correct returns OK and delete data. Else return EROOR.)
+REQ: {"UID":"~E-mail address~","Pass":"~Hashed Password~", "fileName":"~Name of the File With Extension~"}
+RES if OK: 
+	 { type: "delete", status: "OK"}
+RES if NOT OK:
+	 { type: "delete", status: "ERROR"}
+	 
+	 
+LOGIN : https://delvelogin-978221649687.europe-north2.run.app
+SAVES : https://delvesave-978221649687.europe-north2.run.app
+UPLOAD : https://delveupload-978221649687.europe-north2.run.app
+DELETE : https://delvedelete-978221649687.europe-north2.run.app

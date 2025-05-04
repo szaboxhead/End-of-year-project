@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhf3vpur0qtx8"]
+
+[ext_resource type="FontFile" uid="uid://clw637wvicf1w" path="res://Resources/Fonts/dogica/TTF/dogica.ttf" id="1_0x5vj"]
+[ext_resource type="Script" path="res://Scripts/fluff_floater_script.gd" id="2_4l2tl"]
+
+[node name="TradeGoodChangeFloater" type="Label"]
+z_index = 10
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.813258, 0.813258, 0.813258, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("1_0x5vj")
+text = "asdasdasds"
+script = ExtResource("2_4l2tl")

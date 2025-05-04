@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://wsy1j0jebq7e"]
+
+[ext_resource type="Theme" uid="uid://dfeo3ebchf3ul" path="res://Resources/Themes/Default_Theme.tres" id="1_xw4q1"]
+
+[node name="LogBluUi" type="Label"]
+offset_right = 1.0
+offset_bottom = 23.0
+theme = ExtResource("1_xw4q1")
+theme_override_colors/font_color = Color(8.27849e-06, 0.914694, 0.234892, 1)
+text = "This is a Green log"
+autowrap_mode = 3

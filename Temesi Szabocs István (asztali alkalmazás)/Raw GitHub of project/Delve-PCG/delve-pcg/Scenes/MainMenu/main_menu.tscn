@@ -1,0 +1,152 @@
+[gd_scene load_steps=6 format=3 uid="uid://b6p6fw7y8cwmm"]
+
+[ext_resource type="Script" path="res://Scripts/main_menu_script.gd" id="1_kpgij"]
+[ext_resource type="Theme" uid="uid://dfeo3ebchf3ul" path="res://Resources/Themes/Default_Theme.tres" id="2_runae"]
+[ext_resource type="Texture2D" uid="uid://chajd5pf5hdxt" path="res://Resources/Images/MM-BG-mtn.png" id="3_m1280"]
+[ext_resource type="Texture2D" uid="uid://cq6ch2q1rxdk4" path="res://Resources/Images/MM-BG-cld.png" id="4_amf3m"]
+[ext_resource type="AudioStream" uid="uid://bldxaeqwy77ha" path="res://Resources/Music/Game-Menu_Looping.mp3" id="5_hk123"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kpgij")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.495825, 0.726459, 0.784309, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect"]
+z_index = 2
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -45.0
+offset_top = -49.9
+offset_right = 45.0
+offset_bottom = 9.10002
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/HBoxContainer"]
+layout_mode = 2
+
+[node name="Start" type="Button" parent="ColorRect/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+z_index = 2
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("2_runae")
+theme_override_font_sizes/font_size = 56
+text = "Start Game"
+
+[node name="Load" type="Button" parent="ColorRect/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+z_index = 2
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("2_runae")
+theme_override_font_sizes/font_size = 56
+text = "Load Game"
+
+[node name="Options" type="Button" parent="ColorRect/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+visible = false
+z_index = 2
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("2_runae")
+theme_override_font_sizes/font_size = 56
+disabled = true
+text = "Options"
+
+[node name="Quit" type="Button" parent="ColorRect/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+z_index = 2
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("2_runae")
+theme_override_font_sizes/font_size = 56
+text = "Quit"
+
+[node name="Bg" type="Control" parent="ColorRect"]
+unique_name_in_owner = true
+z_index = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.2
+offset_right = -1.20001
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Mountain" type="Sprite2D" parent="ColorRect/Bg"]
+unique_name_in_owner = true
+z_index = 1
+texture_filter = 3
+position = Vector2(872.401, 492.017)
+scale = Vector2(10.0405, 10.0405)
+texture = ExtResource("3_m1280")
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect/Bg/Mountain"]
+offset_left = -196.0
+offset_top = 49.0
+offset_right = 190.0
+offset_bottom = 89.0
+color = Color(0.0901961, 0.0705882, 0.109804, 1)
+
+[node name="Cloud" type="Sprite2D" parent="ColorRect/Bg"]
+unique_name_in_owner = true
+z_index = 1
+texture_filter = 3
+position = Vector2(875.39, 493.024)
+scale = Vector2(10.326, 10.326)
+texture = ExtResource("4_amf3m")
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect/Bg"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 999.0
+offset_right = 1746.0
+offset_bottom = 3778.0
+color = Color(0.08943, 0.0726, 0.11, 1)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(872, 492)
+position_smoothing_enabled = true
+position_smoothing_speed = 1.0
+drag_vertical_enabled = true
+drag_top_margin = 0.64
+drag_bottom_margin = 0.62
+
+[node name="MMenuMusic" type="AudioStreamPlayer" parent="Camera2D"]
+unique_name_in_owner = true
+stream = ExtResource("5_hk123")
+volume_db = -80.0
+pitch_scale = 0.9
+parameters/looping = true
+
+[connection signal="pressed" from="ColorRect/HBoxContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="ColorRect/HBoxContainer/VBoxContainer/Load" to="." method="_on_load_pressed"]
+[connection signal="pressed" from="ColorRect/HBoxContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="ColorRect/HBoxContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

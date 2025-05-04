@@ -1,0 +1,31 @@
+Üdv a DELVE tesztelésében:
+
+v1.0
+A rajzok meg vannak, hurrá! 
+
+A játék jelenleg tartalmaz:
+Mindent ami az előző verzióban volt.
++
+Nyersanyagok szerzésénél az aktuális szoba mellet jelezve van a mennyiség.
+Recruit menü egy kicsit fel lett javítva.
+Egységek láthatóan jelzik hogy mozogtak.(zöld és piros négyzetek)
+Ifó panel szobákról és egységekől.
+Rajzok, Effektek, Hangok
+Felhőbeli mentés, letöltés, törlés
+Lokális törlés
+
+
+A játékból kihagyom:
+Találmányok
+Legendás felfedezések
+Egységek különleges képességei.
+Minden szobának meg van az effektje. -> Csapdák		\
+A Good Magic/Bad Magic effectjei. -> Ősi szörnyek	 } Kihívások -> Játék végi összefoglaló
+
+Ismert hibák:
+Generálásnál vannak olyan szobák amikben ugyanojan egységek vagy effekteknek kéne generálódnia de ez nem történik meg.
+A játékpálya fenti és lenti oldala között lehet szobákat kinyitni mintha egymás mellett lennének.
+Ha egy ellenségnek nincs útja a kijárathoz vagy a Jester-höz akkor a játék kifagy.
+
+Megváltoztatanó:
+Amint meglesznek a grafikák, hangok és a zene be kell rakni.

@@ -1,0 +1,189 @@
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+#maintitle{
+  text-align: center;
+}
+
+  .input-field {
+    position: relative;
+    width: 20em;
+    height: 2.5em;
+    font-size: 16px;
+  }
+
+  .input-field label {
+    position: absolute;
+    top: 70%;
+    left: 0;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.15s ease;
+    font-size: 16px;
+  }
+  
+  .input-field input {
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #fff;
+  }
+
+  button {
+    margin-top: 0.4em; /* Eltolás az input mezőtől */
+    background: #fff;
+    color: #000;
+    font-weight: 600;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 16px;
+    border: 2px solid transparent;
+    transition: 0.3s ease;
+    width: 20em;
+    display: block;
+    margin: auto;
+  }
+
+  button:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+  }
+  
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 50vh;
+    min-height: 105vh;
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    max-height: 200vh;
+    background: url("../img/hero-bg.jpg"), #000;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  body::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .wrapper {
+    width: 400px;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+  
+  .wrapper a {
+    color: #efefef;
+    text-decoration: none;
+  }
+  
+  .wrapper a:hover {
+    text-decoration: underline;
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 0.4em;
+    color: #fff;
+  }
+  
+ .link {
+  text-decoration: none;
+  font-size: 16px;
+  z-index: 9999;
+  color: white;
+  position: absolute;    /* A link pozicionálása az oldalhoz képest */
+  top: 0;                /* A képernyő tetejéhez igazítja */
+  left: 0;               /* A képernyő bal széléhez igazítja */
+  padding: 10px;         
+ }
+
+ .link:hover {
+  font-weight: bold;
+ }
+
+  .input-field input:focus~label,
+  .input-field input:valid~label {
+    font-size: 0.8rem;
+    top: 10px;
+    transform: translateY(-120%);
+  }
+
+  .alert{
+    margin-top: 4em;
+    margin-bottom: 0.5em;
+    background-color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    position: relative; /* A bezárás gombhoz */
+    border: 1px solid transparent; /* Alapértelmezett keret */
+    width: 29em;
+    margin-left: 3em;
+    display: inline-block;
+  }
+  
+  .alert-error {
+    color: #721c24; /* Szöveg színe */
+    background-color: #f8d7da; /* Háttér színe */
+    border-color: #f5c6cb; /* Keret színe */
+    text-align: center;
+  }
+  
+  .alert .closebtn {
+    position:absolute;
+    top: 10px;
+    right: -124px;
+    color: #aaa;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: -11px;  
+    margin-left: 2px;
+    left: 320px;
+    font-weight: bolder;
+  }
+  
+  .alert .closebtn:hover {
+    color: black; /* Szín váltás hoverra */
+  }
+
+
+/* ------ Animation ------ */
+@keyframes keyframes-fill {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+}

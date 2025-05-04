@@ -3,8 +3,8 @@
 **No need to install anything. As long as the Computer running the Aplication has a dedicated GPU it will be able to run it.**
 
 ## This project was made by:
-- Temesi Szabolcs István : Project Lead, Desktop Application Developer
-- Szabó Levente : Front- and Backend Developer
+- Temesi Szabolcs István : Project Lead, Desktop Application Developer, Database Developer
+- Szabó Levente : Front- and Backend Developer, Database Developer
 
 >### Desktop application:
 >- Started development : 2024-09-07
@@ -23,10 +23,13 @@
 >- External artist [@marceles](https://marceles.carrd.co)
 
 >### Website:
->- Started development : 
->- Ended development : 
+>- Started development : 2024-10-09
+>- Ended development : 2024-05-04
 >#### Software Used:
->- 
->-
->-
+>- Visual Studio Code : (https://code.visualstudio.com/)
+>- XAMPP : (https://www.apachefriends.org/hu/index.html)
+>- paint.net : (https://www.getpaint.net/index.html)
+>- ChatGPT : (https://chatgpt.com/)
 >#### Outside sources:
+>##### Website Template:
+>- ThemeWagon : (https://themewagon.com)

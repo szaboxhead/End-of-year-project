@@ -12,7 +12,7 @@
 >#### Software Used:
 >- [Godot Engine](https://godotengine.org)
 >- [Audacity](https://www.audacityteam.org)
->- [Asepite](https://www.aseprite.org)
+>- [Aseprite](https://www.aseprite.org)
 >#### Outside sources:
 >##### Music:
 >- [Soundimage.org](https://soundimage.org)

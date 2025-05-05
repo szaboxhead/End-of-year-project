@@ -24,7 +24,7 @@
 
 >### Website:
 >- Started development : 2024-10-09
->- Ended development : 2024-05-04
+>- Ended development : 2025-05-04
 >#### Software Used:
 >- Visual Studio Code : (https://code.visualstudio.com/)
 >- XAMPP : (https://www.apachefriends.org/hu/index.html)

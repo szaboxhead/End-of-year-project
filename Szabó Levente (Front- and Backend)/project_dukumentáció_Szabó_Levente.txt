@@ -1,0 +1,184 @@
+Projektverziók és Git commit összefoglaló
+Forrás: GitHub & Google Drive archívumok
+
+2024-10-09
+Verzió: registration.zip
+
+-Elsődleges regisztrációs rendszer alapjai
+-Egyszerű felhasználói adatbevitel, bejelentkezési keret
+
+2024-10-18
+Verzió: DELVE Registration,Login and UCP
+
+-Regisztráció és bejelentkezés továbbfejlesztve
+-UCP (User Control Panel) alapfunkciók integrálása
+-Első kezelőfelületi megoldások
+
+2024-11-04
+Verzió: DELVE WebPackage
+
+-Projekt teljes szerkezeti újraszervezése
+-Letisztultabb design és kódbázis
+-Kezdetleges menüpontok és jogosultságkezelés
+
+2024-11-10
+Verzió: latestWebPackagewithFixes
+
+-Hibajavítások: redirectek, jelszóellenőrzés, emailvalidáció
+-Regisztrációs űrlap és beállítások oldala pontosítása
+-CSS javítások, kliens-oldali JS finomítások
+
+2024-11-14
+Verzió: DELVEnewest(nemteljesen) és DELVE_haladasok_latest
+
+-Működő fiókbeállítások és jelszómódosítás
+-Profil deaktiválása funkció (megerősítés szükséges)
+-Kód konszolidálása és mappaátstrukturálás
+
+2024-11-14
+- Initial GitHub commit
+- két favicon hozzáadva az imghez biztonsági másolatként
+- FileUpdate, itt kerültek be a repoba a weboldal template file-jai
+- apróbb fixek/módosítások
+- valamennyi haladás (új js kódrészlet hozzáadása, egyéb kissebb módosítások, és fixelni.txt létrehozása)
+
+2024-11-15
+- jelszóval kapcsolatos fixek és új kódrészlet (jelszó megjelenítés + 2 jelszó hasonlóságának vizsgálata)
+- fixelni.txt módosítása
+- remember_me funkció implementálása (majd törlése a sok probléma miatt)
+- login.php apróbb módosítása
+- frissített TOS és Privacy Policy
+- apróbb fixek php, html és css terén
+- login probléma (új js a bejelentkezéshez, és pár apró css és php módosítás)
+- fix (apró elírások módosítása a login és index php fájlban)
+
+2024-11-17
+- működő login oldal, régebbi verzió, debugolás (két lokális adatbázis között váltogattam, remember_me kódrészleg ideiglenes törlése)
+- próbálok rájönni mi nem jó (debug commit)
+- Merge branch 'main' of https://github.com/LeventeGitHUB2024/DELVE_Project_WebPackage
+- tesztelgetés hogy miért nem lehet bejelentkezni (ez is csak debug commit)
+
+2024-11-18
+- nem sok haladás (debug commit)
+
+2024-12-02
+- nagy előrelépések (itt találtam meg a hibát)
+- rossz adatbázis fájt tölöttem fel
+- megvan a megoldás (id és user_id-t mindenhol email és user_email-re cseréltem, ezáltal megjavult a probléma)
+- users3_kevert_müködö.sql fájl törlése (csak debug miatt szedtem le, mert azzal működött, de a másik lokális verzióval nem)	
+- működik (itt már újra működött a bejelentkezés, mostmár a másik lokális adatbázissal)
+
+2024-12-03
+- fixelni.txt módosítása
+
+2024-12-23
+- Újabb haladások és fixek (A backend php kód minimalizálása a login.php-ban, Tokenek bevezetése és a Remember me újraimplementálása)
+- remember_me kódrészleg újra javításra szorul
+
+2024-12-25
+- egyéb fixek és jelszóvisszaállítás (jelszó visszaállítás beimplementálás elkezdése)
+- trics and fixes (jelszó visszaállítás beimplementálásának folytatása)
+
+2025-01-01
+- apróbb haladások, fixek, bugok, gondok (jelszó visszaállítás beimplementálásának folytatása)
+
+2025-01-10
+- css-el bajlódás (fő style.css-t kicserélélni egy új css-re (forgotten.css), hogy módosításkor, ne a már eredetileg is css-t használó weboldal törjön el)
+- haladások megint (előző commit folytatása, majdnem teljesenen minden átmásolva, a nem kellő dolgok kitörölve)
+- forgotten password css kész (előző commit folytatása)
+- régebbi részek polisholása (login és a logging_in apró módosításaik, stlye_login.css létrehozva és egyéb css fixek)
+
+2025-01-17
+- legfrisebb sql-t beraktam fájlként is 
+- kisebb fixek (alertRemover a forgotten_password php-hez való hozzákapcsolása, alertRemover apró módosítása)
+- ujabb egyeni css + jelszóvisszaállítás design
+- egyéb kisebb fixek (főként password_reset.css módosítások, pár apró módosítás a jelszó visszaállításnál, pl hibakiírás)
+- apróbb logout.php és css design módosítások
+- style.css módosítása
+
+2025-01-23
+- könyvtári szerkezet  áthelyezések, újralinkelések és UCP (A munkálatok elkezdése felhasználói kezelő panel-en) 
+- egyéb haladások (A tervezés és az ötletelés sok időt vesz igénybe)
+- egyéb haladások (A letöltött sablon fájljainak átnézése, tervezések, módosítások, előző commit folytatása)
+
+2025-01-24
+- további haladások, mentési statisztikák (Egyéb statisztikák lehetőség szerinti felvétele diagramokon, befejezni a mentés adatainak kiírását)
+
+2025-02-03
+- módosítások (db.php adatbázis kapcsolat módosítása, felkészülés a szerveren lévő adatbázis eléréséhez)
+- favicon áthelyezése és újralinkelések
+- success.php --> success.html
+- kapcsolódási problémák a szerveres adatbázishoz, email validálás
+- elírás kijavítása a register.php fájl-ban (átirányítás : success.php --> success.html)
+- sikeresen áttértünk a szerveres adatbázisra (mérföldkő commit)
+
+2025-02-04
+- haladások és fixek a jelszóvisszaállításnál (apróbb css és php módosítások)
+- reset_password kibővítése egyéb validálási feltételekkel (új jelszavunkat megadásakor, a regisztrációnál is kötelező jelszóvalidálási és jelszóformázási kikötéseknek meg kell felelünk)
+- password_reset.css módosítások
+- kisebb css fix (előző commit folytatása)
+- egyéb jelszóval kapcsolatos módosítások (css, kép csere, reset_password.php módosítása)
+- apróbb fixek (forgotten.css módosításai)
+- mai munka vége (fixelni.txt és ötletek.txt módosítása)
+
+2025-02-20
+- kisebb vizuális frissítés (képek elhelyezése a regisztrációs és bejelentkezési oldalon), felület finomhangolás (index és login css oldalak apró fix)
+- email validálás javítása (a beviteli mező szabályos emailt vár el, success.html megint success.php lett, és fel is lett frissítve)
+- email validálás kinézetének, visszajelzéseinek fejlesztése
+- mobilnézet támogatásának befejezése, egyéb hibajavítások (A kis képernyős felhasználók mostantól nem fogják tudni használni az oldalt, mivel az UCP-n (felhasználói vezérlőpulton) láthatósági problémák jelentkeztek. Emellett az ideiglenes e-mail címek listája is bővült.)
+
+2025-02-21
+- index és login oldalak apróbb CSS és működésbeli finomhangolása
+- UCP kinézetének frissítése (új logó), kisebb új funkciók integrálása (az UCP főoldalán játék letöltési lehetőség)
+
+2025-03-04
+- általános Szerződési Feltételek (TOS) tartalmi és megjelenési frissítése
+- adatvédelmi szabályzat (Privacy Policy) finomhangolása
+- dashboard.php áthelyezése (arrébb raktam egy másik mappába, mert már nem kellett, de nem akartam kitörölni)
+- logócsere, rebranding kezdeti lépései (új logó feltöltése és használata)
+- TOS és Privacy Policy oldalak elhelyezése az UCP oldalsávjában
+
+2025-03-13
+- kisebb stílusbeli finomhangolások, kódcsinosítás az UCP oldalon
+
+2025-03-15
+- logó átnevezése, átszerkesztése, és kicserélése több fájlban
+- egyéb apróbb módosítások (linkelés módosítás, és pár css módosítás)
+
+2025-03-18
+- utolsó logóváltoztatás és stílusfrissítés (volt még egy új logó, de a kipróbálása után végül ez maradt)
+- kisebb módosítások (Figyelmeztetés került hozzáadásra a bejelentkezési és UCP oldalakhoz, ha azokat kis képernyős eszközön látogatják meg) 
+- további kisebb módosítások történtek az UCP-ben és a cssfájlokban
+- saves.php stilusának módosítása hogy hasonlóbb legyen az UCP fő stílusirányzatához, emellett kisebb fixek és hibajavítások
+- további apróbb hibajavítások, css módosítások
+- settings.php létrejötte, és alapok felállítása a beállítások oldalon
+
+2025-04-08
+- beállítások oldal teljes implementálása kész (felhasználónév, email, jelszó módosítása)
+- fiók deaktiválása opció bevezetése szöveges megerősítéssel
+- kliens- és szerveroldali ellenőrzések hozzáadása (Js + php)
+- külön JavaScript fájl a megerősítéshez és az űrlapok kezeléséhez
+
+2025-04-28
+- email cím módosításának lehetősége eltávolítva (egyéb kisebb módosítások)
+- beállítások oldalon kisebb fejlesztések, működésbeli finomítások
+- különböző hibák javítása (input ellenőrzés, vizuális problémák)
+- nem lehet visszaállítani a jelszót, ha a fiók deaktiválva van
+- felhasználói felület javítások és fejlesztések, például segítőkészebb hibaüzenetek
+
+2025-04-29
+- deaktiválás védelem és jelszóvisszaállítás továbbfejlesztése
+- JavaScript-alapú "backend" hozzáadása a beállítások kezeléséhez (kezdetleges fázisú)
+- javítások a 'remember_me' rendszer körül (még mindig nem működik, lehet, hogy később el lesz távolítva teljesen).
+- lehetőség a régebbi vagy más verziók megtekintésére és letöltésére a weboldal más verziók részén, a főoldalon mindig a legújabb verziót lehet letölteni
+- oldalsáv logók frissítve.
+- néhány css fejlesztés.
+- többnyire php fejlesztések és hibajavítások.
+
+2025-05-04
+- utolsó commit valószínűleg: végső átnézés, fixek, kód tisztítások, és összességében a project átnézése az elejéről, fájlról-fájlra
+- kommentelések ellenőrzése (utolsó fixek)
+- egyéb js backend törlése a projekt egyszerűsítése érdekében, meg lett oldva máshol és máshogy
+
+
+

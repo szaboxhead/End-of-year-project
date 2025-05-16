@@ -14,13 +14,13 @@
 >- [Audacity](https://www.audacityteam.org)
 >- [Aseprite](https://www.aseprite.org)
 >#### Outside sources:
->##### Music:
->- [Soundimage.org](https://soundimage.org)
->- [scottbuckley.com](https://www.scottbuckley.com.au/library/)
->##### SFX:
->- [pixabay.com](https://pixabay.com)
->##### ART:
->- External artist [@marceles](https://marceles.carrd.co)
+>>##### Music:
+>>- [Soundimage.org](https://soundimage.org)
+>>- [scottbuckley.com](https://www.scottbuckley.com.au/library/)
+>>##### SFX:
+>>- [pixabay.com](https://pixabay.com)
+>>##### ART:
+>>- External artist [@marceles](https://marceles.carrd.co)
 
 >### Website:
 >- Started development : 2024-10-09
@@ -30,6 +30,6 @@
 >- XAMPP : (https://www.apachefriends.org/hu/index.html)
 >- paint.net : (https://www.getpaint.net/index.html)
 >- ChatGPT : (https://chatgpt.com/)
->#### Outside sources:
->##### Website Template:
->- ThemeWagon : (https://themewagon.com)
+>>#### Outside sources:
+>>##### Website Template:
+>>- ThemeWagon : (https://themewagon.com)

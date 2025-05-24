@@ -33,3 +33,5 @@
 >>#### Outside sources:
 >>##### Website Template:
 >>- ThemeWagon : (https://themewagon.com)
+>>##### Api Provider:
+>>- Google Cloud Services : (https://cloud.google.com/)
